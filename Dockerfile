@@ -11,7 +11,7 @@ RUN python3 -m venv venv && \
     pip install -e . && \
     echo '#!/bin/sh' > run.sh && \
     echo 'source venv/bin/activate' >> run.sh && \
-    echo 'flask run' >> run.sh && \
+    echo 'flask run -h 0.0.0.0' >> run.sh && \
     chmod 755 run.sh
 
 EXPOSE 5000
